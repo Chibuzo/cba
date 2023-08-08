@@ -1,0 +1,177 @@
+extend layout
+
+block content 
+    section#slider-container.slider-area.three
+        .slider-owl.owl-theme.owl-carousel
+            // Start Slingle Slide
+            .single-slide.item(style='background-image: url(img/tech.jpeg)')
+                // Start Slider Content
+                .slider-content-area
+                    .container
+                        .row
+                            .col-lg-7
+                                .slide-content-wrapper
+                                    .slide-content
+                                        h3 Are you ready for a techy future?
+                                        p Become a professional tech guru now
+                                        a.default-btn(href='#') Enroll Now
+                            .col-lg-5
+                                //- .slider-img
+                                //-     img(src='img/slider/home.png' alt='slider')
+                                // Start Slider Content
+                                // End Slingle Slide
+                                // Start Slingle Slide
+
+    // About Start
+    .about-area.pb-135.pt-130.bg-light
+        .container
+            .row
+                .col-md-6
+                    .about-content
+                        h2 Welcome to 
+                            span Career Builders’ Academy
+                        p Your gateway to success in the ever-evolving tech world! Established with the vision of empowering aspiring tech enthusiasts, we are a leading tech training academy committed to providing top-notch education and professional development.
+                        p We offer quality, professional training taught according to the world-known methodologies. Our professionalism and dedication to providing the best educational standards and solutions allowed us to gain trust of multiple enterprises all over the globe.
+
+                .col-md-6
+                    .aboutimg
+                        img(src='img/about/image.png' alt='about').float-end.mt-5
+
+
+    // Courses Area Start
+    .courses-area.pt-150.text-center.mb-3
+        .container
+            .row
+                .col-12
+                    .section-title
+                        img(src='img/icon/section.png' alt='section-title')
+                        h2 Our Products
+            .row
+                .col-lg-4.col-md-6
+                    .single-course
+                        .course-img
+                            a(href='course-details.html')
+                                img(src='img/products/p1.png' alt='course')
+                                .course-hover
+                                    i.fa.fa-link
+                        .course-content
+                            h3
+                                a(href='course-details.html') Tech Training
+                            p At Career Builders’ Academy, our mission is to empower individuals and businesses with the knowledge and skills they need to navigate the ever-evolving landscape of technology
+
+                            a.default-btn(href='#') read more
+                .col-lg-4.col-md-6
+                    .single-course
+                        .course-img
+                            a(href='course-details.html')
+                                img(src='img/products/p2.png' alt='course')
+                                .course-hover
+                                    i.fa.fa-link
+                        .course-content
+                            h3
+                                a(href='course-details.html') Tech Consultancy
+                            p We bridge the gap between technology and businesses, enabling our clients to thrive in the digital age. We aim to be the go-to resource for companies seeking reliable, unbiased tech expertise, tailored solutions, and long-term support.
+                            a.default-btn(href='#') read more
+                .col-lg-4.col-md-6
+                    .single-course.mb-0
+                        .course-img
+                            a(href='course-details.html')
+                                img(src='img/products/p3.png' alt='course')
+                                .course-hover
+                                    i.fa.fa-link
+                        .course-content
+                            h3
+                                a(href='course-details.html') Partnership
+                            p Our partnership offers opportunities for co-branding, joint marketing campaigns, networking events, and knowledge-sharing sessions, further strengthening our ties and creating a cohesive tech ecosystem.
+                            a.default-btn(href='#') read more
+
+
+        // Event Area Start
+        .event-area.three.text-center.pt-100.pb-115.d-none
+            .container
+                .row
+                    .col-12
+                        .section-title
+                            img(src='img/icon/section.png' alt='section-title')
+                            h2 TRENDING COURSES
+                .row
+                    .col-lg-4.col-md-6
+                        .single-event.mb-35
+                            .event-img
+                                a(href='event-details.html')
+
+                                    .course-hover
+                                        i.fa.fa-link
+                                .event-date
+                                    h3
+                                        | $450
+
+                            .event-content.text-start
+                                h4
+                                    a(href='event-details.html') ADVANCE PHP WORKSHOP
+                                ul
+                                    li
+                                        span time:
+                                        |  9.00 AM - 4.45 PM
+                                    li
+                                        span venue
+                                        |  New Yourk City
+                                .event-content-right
+                                    a.default-btn(href='event-details.html') join now
+                    .col-lg-4.col-md-6
+                        .single-event.mb-35
+                            .event-img
+                                a(href='event-details.html')
+                                    img(src='img/event/event6.jpg' alt='event')
+                                    .course-hover
+                                        i.fa.fa-link
+                                .event-date
+                                    h3
+                                        | 18 
+                                        span jun
+                            .event-content.text-start
+                                h4
+                                    a(href='event-details.html') learning english history
+                                ul
+                                    li
+                                        span time:
+                                        |  9.00 AM - 4.45 PM
+                                    li
+                                        span venue
+                                        |  New Yourk City
+                                .event-content-right
+                                    a.default-btn(href='event-details.html') join now
+                    .col-lg-4.col-md-6
+                        .single-event
+                            .event-img
+                                a(href='event-details.html')
+                                    img(src='img/event/event7.jpg' alt='event')
+                                    .course-hover
+                                        i.fa.fa-link
+                                .event-date
+                                    h3
+                                        | 16 
+                                        span jun
+                            .event-content.text-start
+                                h4
+                                    a(href='event-details.html') UI &amp; UX DESIGNER MEETUP
+                                ul
+                                    li
+                                        span time:
+                                        |  9.00 AM - 4.45 PM
+                                    li
+                                        span venue
+                                        |  New Yourk City
+                                .event-content-right
+                                    a.default-btn(href='event-details.html') join now
+
+        // Subscribe Start
+        .subscribe-area.pt-60.pb-70.mt-5
+            .container
+                .row
+                    .col-lg-8.offset-lg-2
+                        .subscribe-content.section-title.text-center
+                            h2 Join our Work Experience today
+                            p Transition to your dream career with Bootcamps.. 
+
+                            a(href="#").default-btn Join Now
