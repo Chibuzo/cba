@@ -6,10 +6,18 @@ const router = express.Router();
 
 router.get('/', async (req, res, next) => {
     try {
-        res.render('index', { title: 'Welcome' });
+        res.render('index', { title: 'Home' });
     } catch (err) {
         next(err);
     }
+});
+
+router.get('/about', (req, res) => {
+    res.render('about', { title: 'About Us' });
+});
+
+router.get('/resources', (req, res) => {
+    res.render('resources');
 });
 
 

@@ -54,7 +54,6 @@ function normalizePort(val) {
  */
 
 function onError(error) {
-  console.log('ikpu')
   if (error.syscall !== 'listen') {
     throw error;
   }
