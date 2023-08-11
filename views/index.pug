@@ -1,5 +1,24 @@
 extend layout
 
+block styleBlock 
+    style.  
+        .trending-courses {
+            background: #2C2B5E
+        }
+
+        .trending-courses .event-content {
+            padding: 25px;
+            background: #fff
+        }
+
+        .event-footer {
+            border-top: 1px solid #ccc; background: #fff; padding: 12px 25px; font-weight: bold; font-size: 16px
+        }
+
+        .trending-courses h3 { font-size: 30px }
+
+        .trending-courses h4 { font-size: 20px }
+
 block content 
     section#slider-container.slider-area.three
         .slider-owl.owl-theme.owl-carousel
@@ -39,7 +58,7 @@ block content
 
 
     // Courses Area Start
-    .courses-area.pt-150.text-center.mb-3
+    .courses-area.pt-150.pb-100.text-center.mb-3
         .container
             .row
                 .col-12
@@ -50,128 +69,93 @@ block content
                 .col-lg-4.col-md-6
                     .single-course
                         .course-img
-                            a(href='course-details.html')
+                            a(href='/tech-training')
                                 img(src='img/products/p1.png' alt='course')
                                 .course-hover
                                     i.fa.fa-link
                         .course-content
                             h3
-                                a(href='course-details.html') Tech Training
+                                a(href='/tech-training') Tech Training
                             p At Career Builders’ Academy, our mission is to empower individuals and businesses with the knowledge and skills they need to navigate the ever-evolving landscape of technology
 
-                            a.default-btn(href='#') read more
+                            a.default-btn(href='/tech-training') read more
                 .col-lg-4.col-md-6
                     .single-course
                         .course-img
-                            a(href='course-details.html')
+                            a(href='/consultancy')
                                 img(src='img/products/p2.png' alt='course')
                                 .course-hover
                                     i.fa.fa-link
                         .course-content
                             h3
-                                a(href='course-details.html') Tech Consultancy
+                                a(href='/consultancy') Tech Consultancy
                             p We bridge the gap between technology and businesses, enabling our clients to thrive in the digital age. We aim to be the go-to resource for companies seeking reliable, unbiased tech expertise, tailored solutions, and long-term support.
-                            a.default-btn(href='#') read more
+                            a.default-btn(href='/consultancy') read more
                 .col-lg-4.col-md-6
                     .single-course.mb-0
                         .course-img
-                            a(href='course-details.html')
+                            a(href='/partnership')
                                 img(src='img/products/p3.png' alt='course')
                                 .course-hover
                                     i.fa.fa-link
                         .course-content
                             h3
-                                a(href='course-details.html') Partnership
+                                a(href='/partnership') Partnership
                             p Our partnership offers opportunities for co-branding, joint marketing campaigns, networking events, and knowledge-sharing sessions, further strengthening our ties and creating a cohesive tech ecosystem.
-                            a.default-btn(href='#') read more
+                            a.default-btn(href='/partnership') read more
+
+    .trending-courses.pb-100.pt-80
+        .container
+            .row
+                .col-12.partners
+                    h3.text-center.text-white.mb-5 TRENDING COURSES
+            .row 
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 Professional Product Owner
+                        .event-footer 6 Weeks <span class='float-end'>£450</span>
+
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 Professional Scrum Master
+                        .event-footer 6 Weeks <span class='float-end'>£350</span>
+
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 UI/UX Desgin
+                        .event-footer 6 Weeks <span class='float-end'>£350</span>
+
+            .row.mt-4 
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 Business Analysis
+                        .event-footer 6 Weeks <span class='float-end'>£450</span>
+
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 Product Development (Web and Mobile App)
+                        .event-footer 8 Weeks <span class='float-end'>£500</span>
+
+                .col
+                    .single-event.mb-35
+                        .event-content.text-start
+                            h4 Business Process Architecture
+                        .event-footer 6 Weeks <span class='float-end'>£350</span>
 
 
-        // Event Area Start
-        .event-area.three.text-center.pt-100.pb-115.d-none
-            .container
-                .row
-                    .col-12
-                        .section-title
-                            img(src='img/icon/section.png' alt='section-title')
-                            h2 TRENDING COURSES
-                .row
-                    .col-lg-4.col-md-6
-                        .single-event.mb-35
-                            .event-img
-                                a(href='event-details.html')
 
-                                    .course-hover
-                                        i.fa.fa-link
-                                .event-date
-                                    h3
-                                        | $450
+    // Subscribe Start
+    .subscribe-area.pt-100.pb-70
+        .container
+            .row
+                .col-lg-8.offset-lg-2
+                    .subscribe-content.section-title.text-center
+                        h2 Join our Work Experience today
+                        p Transition to your dream career with Bootcamps.. 
 
-                            .event-content.text-start
-                                h4
-                                    a(href='event-details.html') ADVANCE PHP WORKSHOP
-                                ul
-                                    li
-                                        span time:
-                                        |  9.00 AM - 4.45 PM
-                                    li
-                                        span venue
-                                        |  New Yourk City
-                                .event-content-right
-                                    a.default-btn(href='event-details.html') join now
-                    .col-lg-4.col-md-6
-                        .single-event.mb-35
-                            .event-img
-                                a(href='event-details.html')
-                                    img(src='img/event/event6.jpg' alt='event')
-                                    .course-hover
-                                        i.fa.fa-link
-                                .event-date
-                                    h3
-                                        | 18 
-                                        span jun
-                            .event-content.text-start
-                                h4
-                                    a(href='event-details.html') learning english history
-                                ul
-                                    li
-                                        span time:
-                                        |  9.00 AM - 4.45 PM
-                                    li
-                                        span venue
-                                        |  New Yourk City
-                                .event-content-right
-                                    a.default-btn(href='event-details.html') join now
-                    .col-lg-4.col-md-6
-                        .single-event
-                            .event-img
-                                a(href='event-details.html')
-                                    img(src='img/event/event7.jpg' alt='event')
-                                    .course-hover
-                                        i.fa.fa-link
-                                .event-date
-                                    h3
-                                        | 16 
-                                        span jun
-                            .event-content.text-start
-                                h4
-                                    a(href='event-details.html') UI &amp; UX DESIGNER MEETUP
-                                ul
-                                    li
-                                        span time:
-                                        |  9.00 AM - 4.45 PM
-                                    li
-                                        span venue
-                                        |  New Yourk City
-                                .event-content-right
-                                    a.default-btn(href='event-details.html') join now
-
-        // Subscribe Start
-        .subscribe-area.pt-60.pb-70.mt-5
-            .container
-                .row
-                    .col-lg-8.offset-lg-2
-                        .subscribe-content.section-title.text-center
-                            h2 Join our Work Experience today
-                            p Transition to your dream career with Bootcamps.. 
-
-                            a(href="#").default-btn Join Now
+                        a(href="#").default-btn Join Now

@@ -1,0 +1,37 @@
+extend layout 
+
+block content 
+    .banner-area-wrapper
+        .banner-area.text-center
+            .container
+                .row
+                    .col-12
+                        .banner-content-wrapper
+                            .banner-content
+                                h2 Becomme a Partner Today
+    .container
+        .row.justify-content-md-center
+            .col-md-6.col-sm-12.col-xs-12.mt-4.mb-5.bg-light.px-5.py-5
+                form(method="post" action="/submit-forms").mt-2
+                    .mb-3
+                        label.form-label Name of business/government/organisation/training school
+                        input.form-control(type="text" name="name" required)
+                    .mb-3
+                        label.form-label Email
+                        input.form-control(type="email" name="email" required)
+                    .row.mb-3
+                        label.form-label Phone number
+                        .col-md-3
+                            select.form-control(name="code" required)
+                                option(value="")
+                        .col-md-5 
+                            input.form-control(type="text" name="phone")
+                    .mb-3
+                        label.form-label What Partnership do you want?
+                        select.form-control(name="partnership" required)
+                    .mb-3
+                        label.form-label Descibe what you want in few words
+                        textarea.form-control(name="email" required)
+                        .small.text-muted Not more than 500 words
+                    .mb-5
+                        button.btn.btn-danger.float-end(type="submit") Send
