@@ -41,7 +41,7 @@ router.get('/book-consultation', (req, res) => {
 });
 
 router.get('/enroll', (req, res) => {
-    res.render('enroll');
+    res.render('tech-enroll');
 });
 
 router.get('/work-experience', (req, res) => {
