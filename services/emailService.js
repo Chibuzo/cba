@@ -23,18 +23,18 @@ let transporter = nodemailer.createTransport({
     pool: true,
     rateLimit: 20,
     auth: {
-        user: 'noreply@dumena.com.ng',
-        pass: 'change+this'
+        user: process.env.EMAIL,
+        pass: process.env.EMAIL_PSWD
     }
 });
 transporter.use('compile', hbs(options));
 
 const BASE_URL = process.env.BASE_URL;
-const SENT_FROM = 'noreply@dumena.com.ng';
+const SENT_FROM = process.env.EMAIL;
 
 const sendMail = (to, subject, template, data) => {
     let mailOptions = {
-        from: '"Farm\'N\'Invest" <' + SENT_FROM + '>',
+        from: '"Career Builders Academy" <' + SENT_FROM + '>',
         to: to,
         subject: subject,
         template: template,
@@ -64,4 +64,31 @@ module.exports = {
         const template = 'verifyAccount';
         sendMail(user.email, subject, template, data);
     },
+
+    emailCBA: function ({ sender_email, sender_name, sender_phone = '', subject = 'From FAQ', message }) {
+        const template = 'emailCBA';
+        const data = {
+            sender_name,
+            sender_email,
+            sender_phone,
+            message,
+            base_url: BASE_URL
+        };
+
+        const mailOptions = {
+            from: sender_name + '<' + SENT_FROM + '>',
+            to: 'connect@decareerbuilders.com',
+            replyTo: sender_email,
+            subject: subject,
+            template: template,
+            context: data
+        };
+        // send mail with defined transport object
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                return console.log(error);
+            }
+            // console.log('Message sent: %s', info.messageId);
+        });
+    }
 }

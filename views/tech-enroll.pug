@@ -20,7 +20,7 @@ block content
     .container
         .row
             .col-md-6.col-sm-12.col-xs-12.mt-4.mb-5.bg-light.px-5.py-5
-                form(method="post" action="/submit-forms").mt-2
+                form(method="post" action="/send-email").mt-2
                     .mb-3
                         label.form-label First Name
                         input.form-control(type="text" name="fname" required)
@@ -33,13 +33,14 @@ block content
                     .row.mb-3
                         label.form-label Phone number
                         .col-md-3
-                            select.form-control(name="code" required)
+                            select.form-control(name="code")
                                 option(value="")
                         .col-md-5 
                             input.form-control(type="text" name="phone")
                     .mb-3
                         label.form-label Select your course of interest
-                        select.form-control(name="course" required)
+                        input.form-control(type="text" name="course")
+                        input(type="hidden" name="category" value="enroll")
                     .mb-3
                         .small.text-muted Please tick this box if you are happy to contacted by a student advisor and would like to receive special course offers by phone, email and SMS
                         .form-check.mt-3

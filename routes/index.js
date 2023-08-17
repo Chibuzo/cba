@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const emailService = require('../services/emailService');
 // const authenticate = require('../middlewares/authenticate');
 // const userService = require('../services/userService');
 
@@ -57,6 +58,22 @@ router.get('/login', (req, res) => {
     res.render('login', { title: 'Login' });
 });
 
+
+router.post('/send-email', (req, res, next) => {
+    try {
+        const subject = {
+            enroll: 'I want to enroll for a course',
+            consultancy: 'I want to consult on Tech',
+            partnership: 'I want to partner with CBA'
+        };
+        const { email: sender_email, phone: sender_phone, fname, lname = '', message, category } = req.body;
+        emailService.emailCBA({ sender_name: `${fname} ${lname}`, sender_email, sender_phone, subject: subject[category], message });
+        //res.status(200).json({ status: 'success' });
+        res.render('confirmation', { title: 'Message Sent' });
+    } catch (err) {
+        next(err);
+    }
+});
 
 // router.post('/login', async (req, res, next) => {
 //     try {

@@ -16,12 +16,12 @@ block content
                             .banner-content
                                 h2 Become a Partner Today
     .container
-        .row.justify-content-md-center
+        .row 
             .col-md-6.col-sm-12.col-xs-12.mt-4.mb-5.bg-light.px-5.py-5
-                form(method="post" action="/submit-forms").mt-2
+                form(method="post" action="/send-email").mt-2
                     .mb-3
                         label.form-label Name of business/government/organisation/training school
-                        input.form-control(type="text" name="name" required)
+                        input.form-control(type="text" name="fname" required)
                     .mb-3
                         label.form-label Email
                         input.form-control(type="email" name="email" required)
@@ -35,9 +35,10 @@ block content
                     .mb-3
                         label.form-label What Partnership do you want?
                         select.form-control(name="partnership" required)
+                        input(type="hidden" name="category" value="partnership")
                     .mb-3
                         label.form-label Descibe what you want in few words
-                        textarea.form-control(name="email" required)
+                        textarea.form-control(name="message" required)
                         .small.text-muted Not more than 500 words
                     .mb-5
                         button.btn.btn-danger.float-end(type="submit") Send
