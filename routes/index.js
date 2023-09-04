@@ -49,9 +49,13 @@ router.get('/work-experience', (req, res) => {
     res.render('work-form');
 });
 
+router.get('/contact', (req, res) => {
+    res.render('contact', { title: 'Contact Us' });
+});
+
 router.get('/faq', (req, res) => {
     res.render('faq', { title: 'Frequently Asked Questions' });
-})
+});
 
 
 router.get('/login', (req, res) => {

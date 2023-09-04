@@ -1,0 +1,39 @@
+extends layout
+
+block styleBlock 
+    style.
+        .contact { padding: 12px; margin: auto; border-radius: 50%; height: 90px; width: 90px; margin-bottom: 15px }
+
+        .contact .zmdi { font-size: 50px }
+
+block content 
+
+    .banner-area-wrapper
+        .banner-area.text-center
+            .container
+                .row
+                    .col-12
+                        .banner-content-wrapper
+                            .banner-content
+                                h2 Contact us
+
+    .about-area.pb-100.pt-80.bg-light
+        .container
+            .row.text-center
+                .col
+                    .contact
+                        i.zmdi.zmdi-phone
+                    p +44 7306 461 984
+                    | +234 7032 375 495
+                .col 
+                    .contact
+                        i.zmdi.zmdi-email.align-middle
+                    p connect@decareerbuilders.com
+                    | www.decareerbuiders.com
+                .col 
+                    .contact
+                        i.zmdi.zmdi-home
+                    p 16, Rockford Place, Ettingshall. Wolverhampton. United Kingdom
+
+
+

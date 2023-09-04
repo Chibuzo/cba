@@ -27,11 +27,8 @@ block content
                         input.form-control(type="email" name="email" required)
                     .row.mb-3
                         label.form-label Phone number
-                        .col-md-3
-                            select.form-control(name="code" required)
-                                option(value="")
-                        .col-md-5 
-                            input.form-control(type="text" name="phone")
+                        br/
+                        input.form-control#phone(type="text" name="phone")
                     .mb-3
                         label.form-label How can we help you?
                         select.form-control(name="partnership" required)

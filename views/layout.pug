@@ -19,6 +19,7 @@ head
     link(rel='stylesheet' href='css/material-design-iconic-font.min.css')
     link(rel='stylesheet' href='css/style.css')
     link(rel='stylesheet' href='css/responsive.css')
+    link(rel='stylesheet' href='https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css')
     script(src='js/vendor/modernizr-3.11.2.min.js')
     block styleBlock
     style. 
@@ -81,7 +82,7 @@ header.top
                                     li
                                         a(href='#/faq') FAQ
                                     li
-                                        a(href='#/contact') Contact
+                                        a(href='/contact') Contact
 
                         // Main Menu End
                 .col-12
@@ -98,10 +99,10 @@ block content
             .col-12.partners
                 h4.text-white.my-4 OUR PARTNERS
         .row 
-            .col
-                img(src='img/partners/p1.png')
             //- .col
-            //-     img(src='img/partners/p2.png')
+            //-     img(src='img/partners/p1.png')
+            .col
+                img(src='img/partners/p2.png')
             .col
                 img(src='img/partners/p3.png')
             .col
@@ -188,3 +189,11 @@ script(src='js/jquery.mb.YTPlayer.js')
 script(src='js/jquery.nicescroll.min.js')
 script(src='js/plugins.js')
 script(src='js/main.js')
+script(src='https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js')
+script. 
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        separateDialCode: true,
+        //- excludeCountries: ["in", "il"],
+        //- preferredCountries: ["ru", "jp", "pk", "no"]
+    });
