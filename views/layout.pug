@@ -27,6 +27,8 @@ head
             font-size: 20px;
         }
 
+        .f-partners .col img { width: 44% }
+
         .notice { color: #EC1C23; font-weight: bold }
 
         .bullet { list-style-type: disc }
@@ -36,6 +38,8 @@ head
         .offer-area h3 { font-size: 28px }
 
         .form-label { font-weight: bold }
+
+        sup { color: red }
 //if lt IE 8
     p.browserupgrade
         | You are using an 
@@ -94,6 +98,24 @@ block content
 
 
 .footer-bottom.pb-4
+    .container
+        .row
+            .col-12.partners
+                h4.text-white.my-4 Get Certified... Get Noticed
+        .row.f-partners 
+            //- .col
+            //-     img(src='img/partners/p1.png')
+            .col
+                img(src='img/partners/image5.png')
+            .col
+                img(src='img/partners/image6.png')
+            .col
+                img(src='img/partners/image7.png')
+            .col
+                img(src='img/partners/image8.png')
+            .col
+                img(src='img/partners/image9.png')
+.footer-bottom.pb-4(style='background: #612E94')
     .container
         .row
             .col-12.partners

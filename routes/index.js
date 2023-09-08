@@ -46,7 +46,7 @@ router.get('/enroll', (req, res) => {
 });
 
 router.get('/work-experience', (req, res) => {
-    res.render('work-form');
+    res.render('work-experience');
 });
 
 router.get('/contact', (req, res) => {
