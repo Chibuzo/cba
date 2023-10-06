@@ -31,6 +31,8 @@ head
 
         .notice { color: #EC1C23; font-weight: bold }
 
+        .notice-pri { color: #2c2b5e }
+
         .bullet { list-style-type: disc }
 
         .bullet li { margin-left: 25px; line-height: 30px }
@@ -60,8 +62,6 @@ header.top
                         ul
                             li
                                 a(href='#/login') login
-                            li
-                                a(href='#/signup') signup
     .header-area.two.header-sticky
         .container
             .row
@@ -101,7 +101,7 @@ block content
     .container
         .row
             .col-12.partners
-                h4.text-white.my-4 Get Certified... Get Noticed
+                h4.text-white.my-4 LET US LEAD YOU TO THE PATH OF CERTIFICATION
         .row.f-partners 
             //- .col
             //-     img(src='img/partners/p1.png')
@@ -181,9 +181,13 @@ footer.footer-area
                 .col-lg-3.col-md-6.pt-4.pt-lg-0
                     .single-widget
                         h3 get in touch
-                        p
-                            | +44 7306 461 984
-                        p +234 7032 375 495
+                        p +44 7306 461 984
+                            br/ 
+                            | +234 7032 375 495 
+                        p 
+                            a(href='https://api.whatsapp.com/send?phone=+447306461984') 
+                                i.fa.fa-whatsapp(style="font-size: 14px; display: inline-block; margin-bottom: 0") 
+                                | &nbsp Message on WhatsApp
 
                         p
                             | connect@decareerbuilders.com

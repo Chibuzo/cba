@@ -79,6 +79,17 @@ router.post('/send-email', (req, res, next) => {
     }
 });
 
+router.post('/send-contact-email', (req, res, next) => {
+    try {
+        const { email: sender_email, phone: sender_phone, name: sender_name, subject, message } = req.body;
+        emailService.emailCBA({ sender_name, sender_email, sender_phone, subject, message });
+        //res.status(200).json({ status: 'success' });
+        res.render('confirmation', { title: 'Message Sent' });
+    } catch (err) {
+        next(err);
+    }
+});
+
 // router.post('/login', async (req, res, next) => {
 //     try {
 //         req.session.user = await userService.login(req.body);
