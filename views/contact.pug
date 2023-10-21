@@ -6,10 +6,16 @@ block styleBlock
 
         .contact .zmdi { font-size: 50px }
 
+        .socials h4 { font-size: 23px; }
+
+        .socials .footer-social .zmdi { font-size: 25px }
+
+        .footer-social ul li a { height: 50px; width: 50px; padding-top: 11px }
+
 block content 
 
     .banner-area-wrapper
-        .banner-area.text-center
+        .banner-area.text-center(style="background:url('/img/contact.png')")
             .container
                 .row
                     .col-12
@@ -17,9 +23,37 @@ block content
                             .banner-content
                                 h2 Contact us
 
-    .about-area.pb-50.pt-80
+    .about-area.pb-50.pt-50
         .container
-            .row.text-center.justify-content-md-center 
+            .row 
+                .col-md-6 
+                    .socials.text-center 
+                        h4.notice-pri.mb-3 Connect With Us On Social Media
+                        .footer-social
+                            ul
+                                li
+                                    a(href='#https://www.facebook.com/devitems/?ref=bookmarks')
+                                        i.zmdi.zmdi-facebook
+                                li
+                                    a(href='#https://www.pinterest.com/devitemsllc/')
+                                        i.zmdi.zmdi-youtube
+                                li
+                                    a(href='#https://www.pinterest.com/devitemsllc/')
+                                        i.zmdi.zmdi-instagram
+                                li
+                                    a(href='#https://www.pinterest.com//')
+                                        i.zmdi.zmdi-twitter
+
+                .col-md-6 
+                    .socials.text-center 
+                        h4.notice-pri.mb-3 You Can Also Chat With Us
+                        .footer-social
+                            ul
+                                li
+                                    a(href='https://api.whatsapp.com/send?phone=447306461984')
+                                        i.zmdi.zmdi-whatsapp
+
+            .row.text-center.justify-content-md-center.pt-40
                 .col-md-9 
                     .row
                         .col
